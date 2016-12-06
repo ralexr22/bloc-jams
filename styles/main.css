@@ -50,7 +50,6 @@ body {
      letter-spacing: 0.05rem;
      font-weight: 700;
      text-transform: uppercase;
-     /* #3 */
      text-decoration: none;
      cursor: pointer;
  }
@@ -58,9 +57,12 @@ body {
    /* #5 */
  .links-container .navbar-link:hover {
      color: rgb(233,50,117);
-     background-color: white;
-     a:active { background-color: white } /* active links */
  }
+
+ .links-container .navbar-link:active {
+     background-color: white;
+}
+
 
 .container {
     margin: 0 auto;

@@ -44,7 +44,10 @@
  
  .album-view-song-item {
      height: 3rem;
+<<<<<<< HEAD
      /* #1 */
+=======
+>>>>>>> checkpoint-22
      border-bottom: 1px solid rgba(255,255,255,0.5);
  }
  
@@ -58,4 +61,26 @@
  
  .song-item-duration {
      width: 5%;
+<<<<<<< HEAD
+=======
+ }
+
+ @media (max-width: 640px) and (min-width: 320px) {
+     .album-view-details {
+         text-align: center;
+     }
+     
+     .album-view-title {
+         margin-top: 0;   
+     }
+ }
+ 
+ @media (max-width: 1024px) and (min-width: 320px) {
+    .album-view-song-list {
+         position: relative;
+         top: 1rem;
+         width: 80%;
+         margin: auto;
+     }
+>>>>>>> checkpoint-22
  }

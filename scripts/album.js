@@ -30,6 +30,20 @@
      ]
  };
 
+var albumVanGogh = {
+     title: 'Starry Nights',
+     artist: 'Vincent',
+     label: 'Impressions',
+     year: '1881',
+     albumArtUrl: 'assets/images/album_covers/09.png',
+     songs: [
+         { title: 'Flower', duration: '4:26' },
+         { title: 'Meadow', duration: '3:14' },
+         { title: 'Rain', duration: '5:01' },
+         { title: 'Night', duration: '3:21'}
+     ]
+ };
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template = 
         '<tr class="album-view-song-item">'
@@ -67,5 +81,7 @@ var setCurrentAlbum = function(album) {
  
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
+     album.addEventListener('click', function(event) {
+         
  };
 }

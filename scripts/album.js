@@ -77,11 +77,30 @@ var setCurrentAlbum = function(album) {
      for (var i = 0; i < album.songs.length; i++) {
          albumSongList.innerHTML += createSongRow(i + 1, album.songs[i].title, album.songs[i].duration);
      }
+
+
+                                
  };
  
  window.onload = function() {
      setCurrentAlbum(albumPicasso);
-     album.addEventListener('click', function(event) {
-         
- };
+     var albumImage = document.getElementsByClassName('album-cover-art')[0];
+     var clickIndex = 0
+     var albums = [albumPicasso, albumMarconi, albumVanGogh]
+    albumImage.addEventListener('click', function(event){ 
+
+         if (clickIndex > albums.length - 1) {
+             clickIndex = 0
+         }
+        // variable with all albums
+         // index that starts at 0
+         // i++
+         // reset index to 0
+         // setCurrentAlbum with album at index
+         console.log(clickIndex)
+
+         setCurrentAlbum(albums[clickIndex])
+         console.log(albums[clickIndex])
+            clickIndex++
+     });
 }

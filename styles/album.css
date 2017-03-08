@@ -44,15 +44,13 @@
  
  .album-view-song-item {
      height: 3rem;
-<<<<<<< HEAD
-     /* #1 */
-=======
->>>>>>> checkpoint-22
+
      border-bottom: 1px solid rgba(255,255,255,0.5);
  }
  
  .song-item-number {
      width: 5%;
+     min-width: 30px;
  }
  
  .song-item-title {
@@ -61,9 +59,28 @@
  
  .song-item-duration {
      width: 5%;
-<<<<<<< HEAD
-=======
  }
+
+.album-song-button {
+    text-align: center;
+    font-size: 14px;
+    background-color: white;
+    color: rgb(210, 40, 123);
+    border-radius: 50% 50%;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+}
+
+.album-song_button:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(210, 40, 123);
+}
+
+.album-song-button span {
+    line-height: 28px;
+}
 
  @media (max-width: 640px) and (min-width: 320px) {
      .album-view-details {
@@ -82,5 +99,4 @@
          width: 80%;
          margin: auto;
      }
->>>>>>> checkpoint-22
  }

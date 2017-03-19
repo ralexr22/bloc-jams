@@ -1,4 +1,4 @@
- // Example Album
+  // Example Album
  var albumPicasso = {
      title: 'The Colors',
      artist: 'Pablo Picasso',
@@ -67,9 +67,14 @@ var findParentByClassName = function(element, targetClass) {
         var currentParent = element.parentElement;
         while (currentParent.className !== targetClass && currentParent.classname !== null) {
             currentParent = currentParent.parentElement;
+            
         }
+         if (typeof element.parentElement === 'undefined') {
+                console.log("no parent found");
+            }
         return currentParent;
     }
+   
  };
 
 var getSongItem = function(element) {

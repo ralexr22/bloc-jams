@@ -32,7 +32,7 @@
 
 var createSongRow = function(songNumber, songName, songLength) {
     var template = 
-            '<tr class="album-view-song-item">'
+      '<tr class="album-view-song-item">'
      +'     <td class="song-item-number" data-song-number="' + songNumber + '">' + songNumber + '</td>'
      +'     <td class="song-item-title">' + songName + '</td>'
      +'     <td class="song-item-duration">' + songLength + '</td>'
@@ -65,8 +65,16 @@ var setCurrentAlbum = function(album) {
 var findParentByClassName = function(element, targetClass) {
     if (element) {
         var currentParent = element.parentElement;
-        while (currentParent.className !== targetClass && currentParent.classname !== null) {
-            currentParent = currentParent.parentElement;
+        if (element.parentElement === null || typeof element.parentElement === "undefined") {
+            console.log("no parent found");
+        }
+        if (currentParent) {
+            while (currentParent.className !== targetClass && currentParent.classname !== null) {
+                currentParent = currentParent.parentElement;
+            }
+        }
+        if (currentParent === null || typeof element.parentElement === "undefined") {
+            console.log("No parent found with that class name.")
         }
         return currentParent;
     }

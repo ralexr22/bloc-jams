@@ -120,13 +120,11 @@ var togglePlayFromPlayerBar = function() {
   var songNumberCell = $(this).find('.song-item-number');
 
   if (currentSoundFile.isPaused()) {
-    songNumberCell.html(playerBarPlayButton);
     currentSoundFile.play();
-    updatePlayerBarSong();
+    $('.main-controls .play-pause').html(playerBarPlayButton);
   } else {
-    songNumberCell.html(playerBarPauseButton);
     currentSoundFile.pause();
-    updatePlayerBarSong();
+    $('.main-controls .play-pause').html(playerBarPauseButton);
   }
 };
 
@@ -178,7 +176,7 @@ var previousSong = function() {
 
 var playButtonTemplate = '<a class="album-song-button"><span class="ion-play"></span></a>';
 var pauseButtonTemplate = '<a class="album-song-button"><span class="ion-pause"></span></a>';
-var playerBarPlayButton = '<span class="ion-play></span>';
+var playerBarPlayButton = '<span class="ion-play"></span>';
 var playerBarPauseButton = '<span class="ion-pause"></span>';
 var currentAlbum = null;
 var currentlyPlayingSongNumber = null;
